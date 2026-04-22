@@ -3,4 +3,3 @@ venv/
 __pycache__/
 .DS_Store
 .ipynb_checkpoints/
-data/processed/humaid_combined.csv
