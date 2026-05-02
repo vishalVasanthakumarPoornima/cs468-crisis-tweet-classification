@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 
-RAW_DATA_PATH = "data/raw/events"
+RAW_DATA_PATH = "data/raw"
 PROCESSED_PATH = "data/processed"
 
 def load_all_data():

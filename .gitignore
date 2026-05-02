@@ -6,4 +6,5 @@ __pycache__/
 data/processed/humaid_combined.csvmodels/
 data/processed/
 .DS_Store
+humaid_combined.csv
 models/
