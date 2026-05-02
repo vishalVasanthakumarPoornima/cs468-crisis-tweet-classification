@@ -18,16 +18,32 @@ def ask_gemma(prompt):
 
 def build_prompt(tweet):
     return f"""
-Classify this tweet into ONE of the following EXACT categories:
+Classify the tweet into one of these categories:
+caution_and_advice
+displaced_people_and_evacuations
+infrastructure_and_utility_damage
+injured_or_dead_people
+missing_or_found_people
+not_humanitarian
+other_relevant_information
+requests_or_urgent_needs
+rescue_volunteering_or_donation_effort
+sympathy_and_support
 
-[caution_and_advice, displaced_people_and_evacuations, infrastructure_and_utility_damage,
-injured_or_dead_people, missing_or_found_people, not_humanitarian,
-other_relevant_information, requests_or_urgent_needs,
-rescue_volunteering_or_donation_effort, sympathy_and_support]
+Examples:
+Tweet: "Praying for all families affected"
+Answer: sympathy_and_support
 
-Return ONLY the exact label (no extra words, no typos).
+Tweet: "Homes destroyed by wildfire"
+Answer: infrastructure_and_utility_damage
 
+Tweet: "Donate to help victims"
+Answer: rescue_volunteering_or_donation_effort
+
+Now classify:
 Tweet: "{tweet}"
+
+Answer:
 """
 
 predictions = []
