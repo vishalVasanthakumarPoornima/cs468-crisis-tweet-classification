@@ -16,7 +16,7 @@ def ask_gemma(prompt):
     )
     return result.stdout.strip()
 
-def build_prompt(tweet):
+def build_few_shot_prompt(tweet):
     return f"""
 Classify the tweet into one of these categories:
 caution_and_advice
@@ -50,7 +50,7 @@ predictions = []
 
 # Run on small sample first
 for tweet in df["tweet_text"][:100]:
-    prompt = build_prompt(tweet)
+    prompt = build_few_shot_prompt(tweet)
     output = ask_gemma(prompt)
     predictions.append(output)
     print("Tweet:", tweet)
