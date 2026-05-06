@@ -172,6 +172,15 @@ def main():
     predictions = trainer.predict(test_dataset)
     predicted_labels = np.argmax(predictions.predictions, axis=1)
     true_labels = predictions.label_ids
+    prediction_df = pd.DataFrame({
+        "true_label": [id_to_label[i] for i in true_labels],
+        "predicted_label": [id_to_label[i] for i in predicted_labels]
+    })
+
+    prediction_df.to_csv(
+        os.path.join(RESULTS_DIR, "distilbert_predictions.csv"),
+        index=False
+    )
 
     report = classification_report(
         true_labels,

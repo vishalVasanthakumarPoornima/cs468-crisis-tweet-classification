@@ -1,0 +1,19 @@
+Final Model Comparison
+
+DistilBERT (Fine-tuned)
+- Accuracy: 0.79
+- Macro F1: 0.66
+- Weighted F1: 0.78
+- Latency: ~71s
+
+Gemma Zero-shot (Prompt-based)
+- Accuracy: TBD
+- Macro F1: TBD
+- Weighted F1: TBD
+- Latency: TBD
+
+Gemma Few-shot (Prompt-based)
+- Accuracy: TBD
+- Macro F1: TBD
+- Weighted F1: TBD
+- Latency: TBD

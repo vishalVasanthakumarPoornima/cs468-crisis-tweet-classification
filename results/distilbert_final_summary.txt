@@ -1,0 +1,18 @@
+DistilBERT Final Results
+
+Accuracy: 0.79
+Macro F1 Score: 0.66
+Weighted F1 Score: 0.78
+Evaluation Runtime: ~71 seconds
+
+Key Observations:
+- Strong performance on high-frequency classes such as infrastructure damage and rescue efforts
+- Very strong performance on injured_or_dead_people (F1: 0.94)
+- Poor performance on rare classes such as missing_or_found_people (F1: 0.00)
+- Weak performance on not_humanitarian (F1: 0.35)
+- Confusion observed between semantically similar categories such as:
+  - other_relevant_information vs not_humanitarian
+  - requests vs sympathy_and_support
+
+Conclusion:
+- DistilBERT performs well overall but is affected by class imbalance and semantic overlap between categories
